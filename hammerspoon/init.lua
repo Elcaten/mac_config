@@ -49,10 +49,10 @@ hyper.bind({}, 'c', am.toggleApp("Calendar", function(app)
 end))
 hyper.bind({}, '`', am.toggleApp("kitty", function(app)
     app:selectMenuItem({ "Shell", "New OS Window" })
-end), function(app)
+end, function(app)
     hs.application.get("kitty"):mainWindow():moveToUnit '[100,50,0,0]'
     hs.application.get("kitty"):mainWindow().setShadows(false)
-end)
+end))
 
 -- Window Management
 hyper.bind({}, 'return', function()
