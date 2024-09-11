@@ -38,20 +38,20 @@ for _, keyName in ipairs(keyNames) do
 end
 
 -- Map Hyper + <KEY> to toggle apps
-hyper.bind({}, 'b', am.toggleApp("Bear", function(app)
+hyper.bind({}, 'b', am.toggleApp("net.shinyfrog.bear", function(app)
     app:selectMenuItem({ "Window", "Main Window" })
 end))
-hyper.bind({}, 't', am.toggleApp("Things", function(app)
+hyper.bind({}, 't', am.toggleApp("com.culturedcode.ThingsMac", function(app)
     app:selectMenuItem({ "File", "New Things Window" })
 end))
-hyper.bind({}, 'c', am.toggleApp("Calendar", function(app)
+hyper.bind({}, 'c', am.toggleApp("com.apple.iCal", function(app)
     app:selectMenuItem({ "Window", "Calendar" })
 end))
-hyper.bind({}, '`', am.toggleApp("kitty", function(app)
+hyper.bind({}, '`', am.toggleApp("net.kovidgoyal.kitty", function(app)
     app:selectMenuItem({ "Shell", "New OS Window" })
 end, function(app)
-    hs.application.get("kitty"):mainWindow():moveToUnit '[100,50,0,0]'
-    hs.application.get("kitty"):mainWindow().setShadows(false)
+    hs.application.get("net.kovidgoyal.kitty"):mainWindow():moveToUnit '[100,50,0,0]'
+    hs.application.get("net.kovidgoyal.kitty"):mainWindow().setShadows(false)
 end))
 
 -- Window Management

@@ -1,8 +1,8 @@
 local This = {}
 
-function This.toggleApp(name, createNewWindowHandler, successHandler)
+function This.toggleApp(bundleId, createNewWindowHandler, successHandler)
     return function()
-        local app = hs.application.get(name)
+        local app = hs.application.get(bundleId)
 
         if app then
             if not app:mainWindow() then
@@ -16,8 +16,9 @@ function This.toggleApp(name, createNewWindowHandler, successHandler)
                 app:activate()
             end
         else
-            hs.application.launchOrFocus(name)
-            app = hs.application.get(name)
+            hs.alert.show("Launch", 0.5)
+            hs.application.launchOrFocusByBundleID(bundleId)
+            app = hs.application.get(bundleId)
         end
 
         successHandler(app)
