@@ -1,0 +1,12 @@
+[alias]
+	c = commit
+	camend = commit --amend --no-edit
+	cfixup = "!f(){ git commit --fixup=$1; git rebase -i --autosquash $1~1; };f" 
+	rb = rebase
+	rbabort = "!f(){ git rebase --abort; };f"
+	st = status
+	co = checkout
+	rs = "!f(){ git reset HEAD~$1; };f"
+	rh = "!f(){ git reset --hard HEAD~$1; };f"
+	pf = push --force-with-lease
+	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --no-merges
