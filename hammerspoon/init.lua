@@ -53,6 +53,9 @@ end, function(app)
     hs.application.get("net.kovidgoyal.kitty"):mainWindow():moveToUnit '[100,50,0,0]'
     hs.application.get("net.kovidgoyal.kitty"):mainWindow().setShadows(false)
 end))
+hyper.bind({}, 'm', am.toggleApp("com.apple.mail", function(app)
+    app:selectMenuItem({ "File", "New Viewer Window" })
+end))
 
 -- Window Management
 hyper.bind({}, 'return', function()
