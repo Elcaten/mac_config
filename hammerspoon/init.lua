@@ -47,14 +47,14 @@ end))
 hyper.bind({}, 'c', am.toggleApp("com.apple.iCal", function(app)
     app:selectMenuItem({ "Window", "Calendar" })
 end))
-hyper.bind({}, '`', am.toggleApp("net.kovidgoyal.kitty", function(app)
-    app:selectMenuItem({ "Shell", "New OS Window" })
+hyper.bind({}, '`', am.toggleApp("com.mitchellh.ghostty", function(app)
+    app:selectMenuItem({ "File", "New Window" })
 end, function(app)
-    hs.application.get("net.kovidgoyal.kitty"):mainWindow():moveToUnit '[100,50,0,0]'
-    hs.application.get("net.kovidgoyal.kitty"):mainWindow().setShadows(false)
+    hs.application.get("com.mitchellh.ghostty"):mainWindow():moveToUnit '[100,50,0,0]'
 end))
 hyper.bind({}, 'm', am.toggleApp("com.apple.mail", function(app)
     app:selectMenuItem({ "File", "New Viewer Window" })
+    hs.application.get("com.mitchellh.ghostty"):mainWindow():moveToUnit '[100,50,0,0]'
 end))
 
 -- Window Management
