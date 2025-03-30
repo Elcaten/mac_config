@@ -21,7 +21,9 @@ function This.toggleApp(bundleId, createNewWindowHandler, successHandler)
             app = hs.application.get(bundleId)
         end
 
-        successHandler(app)
+        if successHandler then
+            successHandler(app)
+        end
     end
 end
 

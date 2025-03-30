@@ -1,6 +1,6 @@
 local This = {}
 
-This.hyperMode = hs.hotkey.modal.new({}, 'F20')
+This.hyperMode = hs.hotkey.modal.new({}, 'F18')
 
 -- Enter Hyper Mode when F18 (Hyper) is pressed
 local function enterHyperMode()

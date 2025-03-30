@@ -3,7 +3,7 @@ local wm = require "window_management"
 local hyper = require('hyper')
 local am = require('application_management')
 
-hyper.install('F19')
+hyper.install('F20')
 
 local function sendKeyCode(key, modifiers)
     modifiers = modifiers or {}
